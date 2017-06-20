@@ -1,4 +1,17 @@
-import React from 'react';
-import './Sidebar.css'
+import React, { Component } from 'react';
+import './Sidebar.css';
 
-export default ({ children }) => (<aside>{children}</aside>);
+class Sidebar extends Component {
+
+	constructor(props) {
+        super(props)
+    }
+
+    render(){
+        return <aside>
+            {this.props.children}
+        </aside>
+    }
+}
+
+export default Sidebar;

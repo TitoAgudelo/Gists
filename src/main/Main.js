@@ -1,6 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Main.css';
 
-export default ({ children }) => (
-    <main>{children}</main>
-);
+class Main extends Component {
+
+	constructor(props) {
+        super(props)
+    }
+
+    render(){
+        return <main>
+            {this.props.children}
+        </main>
+    }
+}
+
+export default Main;
