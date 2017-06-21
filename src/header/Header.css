@@ -2,7 +2,7 @@ header {
     background-color: #323232;
     height: 60px;
     margin: 0 auto;
-    padding: 0 calc(100% - 1280px);
+    padding: 0 2rem;
 }
 
 .navbar-default {

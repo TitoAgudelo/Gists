@@ -1,0 +1,30 @@
+.group-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.group-form label {
+    color: #2C3E50;
+}
+
+.group-form textarea {
+    border: 1px solid #3498DB;
+    border-radius: 5px;
+    min-height: 3rem;
+}
+
+.group-form input {
+    border: 1px solid #3498DB;
+    border-radius: 5px;
+}
+
+.group-form button {
+    background-color: #2C3E50;
+    color: white;
+    border: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    padding: 10px 20px;
+}

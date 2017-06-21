@@ -9,9 +9,9 @@ class Gists extends Component {
     }
 
     render(){
-        return <p>
+        return <div className="gigt-item">
             {this.props.children}
-        </p>
+        </div>
     }
 }
 

@@ -11,6 +11,8 @@ class Home extends Component {
     render(){
         return <section>
             <h1>Welcome to Gigts Test</h1>
+            <p>Please select any gigt of the list in the left.</p>
+            <p>The default user is titoagudelo for this test.</p>
         </section>
     }
 }

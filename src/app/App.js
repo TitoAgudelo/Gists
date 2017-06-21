@@ -9,6 +9,7 @@ import Sidebar from './../sidebar/Sidebar';
 import Main from './../main/Main';
 import Home from './../home/Home';
 import Header from './../header/Header';
+import Create from './../create/Create';
 
 class App extends Component {
 
@@ -26,25 +27,23 @@ class App extends Component {
 
   render() {
     const { gists } = this.state;
+    console.log(gists);
     return (
       <Router>
         <div className="app-container">
           <Header></Header>
           <section className="flex-flow">
-            <Route path="/" exact render={
-              ({ match }) => (
-                <Sidebar>
-                  {gists ? gists.map(gist => (
-                    <Gists key={gist.id}>
-                        <Link to={`/gist/${gist.id}`}>
-                            {gist.description || '[no description]'}
-                        </Link>
-                    </Gists>
-                    )) : (<p>Loading…</p>)
-                  }
-                </Sidebar>
-              )
-            }/>
+            <Sidebar>
+              {gists ? gists.map(gist => (
+                <Link key={gist.id} className="item-link" to={`/gist/${gist.id}`}>
+                  <Gists>
+                    <p>Gigt: {gist.description || '[no description]'}</p>
+                    <p className="gigt-username">By: {gist.owner.login || 'github'}</p>
+                  </Gists>
+                </Link>
+                )) : (<p>Loading…</p>)
+              }
+            </Sidebar>
             <Main>
               <Route path="/" exact component={Home} />
               {
@@ -56,7 +55,7 @@ class App extends Component {
                   } />
                 )
               }
-              <Route path="/create" exact component={Home} />
+              <Route path="/create" exact component={Create} />
             </Main>
           </section>
         </div>

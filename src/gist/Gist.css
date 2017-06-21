@@ -1,0 +1,39 @@
+.git-detail {
+
+}
+
+.gigt-description {
+    color: #3498DB;
+}
+
+.gigt-author {
+    color: #1C1A1A;
+}
+
+.gigt-view {
+    color: #2C3E50;
+}
+
+.gigt-file {
+
+}
+
+.gigt-list-files {
+    background-color: #E74C3C;
+    border: 2px dashed;
+    border-radius: 5px;
+    list-style: none;
+    padding: 1rem;
+}
+
+.gigt-list-item {
+}
+
+.gigt-list-item a {
+    color: #ECF0F1;
+    text-decoration: none;
+}
+
+.gigt-list-item a:hover {
+    color: #1C1A1A;
+}
