@@ -3,12 +3,13 @@ import './Sidebar.css';
 
 class Sidebar extends Component {
 
-	constructor(props) {
-        super(props)
+	// eslint-disable-next-line
+    constructor(props) {
+        super(props);
     }
 
     render(){
-        return <aside>
+        return <aside className="gigt-list">
             {this.props.children}
         </aside>
     }

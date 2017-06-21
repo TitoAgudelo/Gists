@@ -1,0 +1,40 @@
+header {
+    background-color: #323232;
+    height: 60px;
+    margin: 0 auto;
+    padding: 0 calc(100% - 1280px);
+}
+
+.navbar-default {
+    align-items: center;
+    height: 60px;
+    display: flex;
+}
+
+.navbar-header {
+    max-height: 30px;
+}
+
+.navbar-header img {
+    height: 30px;
+    width: 30px;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-nav li {
+    margin: 0 10px;
+}
+
+.navbar-nav li a {
+    color: #ECF0F1;
+    text-decoration: none;
+}
+
+.navbar-nav li a:hover {
+    color: #3498DB;
+}
+

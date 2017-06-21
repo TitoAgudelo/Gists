@@ -3,8 +3,9 @@ import './Home.css';
 
 class Home extends Component {
 
+    // eslint-disable-next-line
 	constructor() {
-        super()
+        super();
     }
 
     render(){

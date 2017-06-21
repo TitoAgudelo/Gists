@@ -3,8 +3,9 @@ import './Gists.css';
 
 class Gists extends Component {
 
+    // eslint-disable-next-line
 	constructor(props) {
-        super(props)
+        super(props);
     }
 
     render(){

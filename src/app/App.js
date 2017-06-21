@@ -8,6 +8,7 @@ import Gist from './../gist/Gist';
 import Sidebar from './../sidebar/Sidebar';
 import Main from './../main/Main';
 import Home from './../home/Home';
+import Header from './../header/Header';
 
 class App extends Component {
 
@@ -16,7 +17,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('https://api.github.com/gists')
+    fetch('https://api.github.com/users/titoagudelo/gists')
       .then(res => res.json())
       .then(gists => {
         this.setState({ gists })
@@ -28,28 +29,36 @@ class App extends Component {
     return (
       <Router>
         <div className="app-container">
-          <Sidebar>
-            {gists ? gists.map(gist => (
-              <Gists key={gist.id}>
-                  <Link to={`/gist/${gist.id}`}>
-                      {gist.description || '[no description]'}
-                  </Link>
-              </Gists>
-              )) : (<p>Loading…</p>)
-            }
-          </Sidebar>
-          <Main>
-            <Route path="/" exact component={Home} />
-            {
-              gists && (
-                <Route path="/gist/:gistId" render={
-                  ({ match }) => (
-                      <Gist gist={gists.find(g => g.id === match.params.gistId)} />
-                  )
-                } />
+          <Header></Header>
+          <section className="flex-flow">
+            <Route path="/" exact render={
+              ({ match }) => (
+                <Sidebar>
+                  {gists ? gists.map(gist => (
+                    <Gists key={gist.id}>
+                        <Link to={`/gist/${gist.id}`}>
+                            {gist.description || '[no description]'}
+                        </Link>
+                    </Gists>
+                    )) : (<p>Loading…</p>)
+                  }
+                </Sidebar>
               )
-            }
-          </Main>
+            }/>
+            <Main>
+              <Route path="/" exact component={Home} />
+              {
+                gists && (
+                  <Route path="/gist/:gistId" render={
+                    ({ match }) => (
+                        <Gist gist={gists.find(g => g.id === match.params.gistId)} />
+                    )
+                  } />
+                )
+              }
+              <Route path="/create" exact component={Home} />
+            </Main>
+          </section>
         </div>
       </Router>
     );

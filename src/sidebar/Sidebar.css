@@ -5,3 +5,10 @@ Sidebar {
     height: '100vh';
     overflow: 'scroll';
 }
+
+.gigt-list {
+  background-color: #eee;
+  height: 100vh;
+  padding: 16px;
+  width: 300px;
+}

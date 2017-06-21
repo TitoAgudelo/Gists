@@ -3,8 +3,9 @@ import './Main.css';
 
 class Main extends Component {
 
-	constructor(props) {
-        super(props)
+	// eslint-disable-next-line
+    constructor(props) {
+        super(props);
     }
 
     render(){
